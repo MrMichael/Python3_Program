@@ -235,4 +235,21 @@ def log(text):
 h = log("hello")(now)
 h()
 		
+	
+#偏函数
+#通过functools.partial函数，把一个函数的某些参数设置默认值，返回一个新函数
+import functools
+
+def info(x = 10, y = 5):
+	print(x,y)
+	return
+
+print('functools partial')
+info2 = functools.partial(info, y=2)	#将默认的10进制改为2进制
+info2()
+	
+	
+	
+	
+	
 
